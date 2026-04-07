@@ -23,15 +23,15 @@ data class ExtendedColors(
 
 private val LocalExtendedColors = staticCompositionLocalOf {
     ExtendedColors(
-        surfaceElevated = Color.Unspecified,
-        surfaceBright = Color.Unspecified,
-        success = Color.Unspecified,
-        streak = Color.Unspecified,
-        accentPink = Color.Unspecified,
-        destructive = Color.Unspecified,
-        textSecondary = Color.Unspecified,
-        textTertiary = Color.Unspecified,
-        border = Color.Unspecified,
+        surfaceElevated = SurfaceElevated,
+        surfaceBright = SurfaceBright,
+        success = Success,
+        streak = Streak,
+        accentPink = AccentPink,
+        destructive = Destructive,
+        textSecondary = TextSecondary,
+        textTertiary = TextTertiary,
+        border = Border,
     )
 }
 
