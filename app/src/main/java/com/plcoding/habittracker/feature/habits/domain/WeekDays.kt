@@ -22,4 +22,20 @@ data class WeekDays(
             DayOfWeek.SUNDAY -> sunday
         }
     }
+
+    fun hasAtLeastOneDay(): Boolean {
+        return monday || tuesday || wednesday || thursday || friday || saturday || sunday
+    }
+
+    fun toggle(dayOfWeek: DayOfWeek): WeekDays {
+        return when (dayOfWeek) {
+            DayOfWeek.MONDAY -> copy(monday = !monday)
+            DayOfWeek.TUESDAY -> copy(tuesday = !tuesday)
+            DayOfWeek.WEDNESDAY -> copy(wednesday = !wednesday)
+            DayOfWeek.THURSDAY -> copy(thursday = !thursday)
+            DayOfWeek.FRIDAY -> copy(friday = !friday)
+            DayOfWeek.SATURDAY -> copy(saturday = !saturday)
+            DayOfWeek.SUNDAY -> copy(sunday = !sunday)
+        }
+    }
 }

@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">HabitTracker</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="today">Today</string>
+    <string name="daily_progress">Daily progress</string>
+    <string name="statistics">Statistics</string>
+    <string name="add_habit">Add habit</string>
+    <string name="day_streak">%1$d day streak</string>
+    <string name="no_streak_yet">No streak yet</string>
+    <string name="no_habits_yet">No habits yet</string>
+    <string name="tap_plus_to_add">Tap + to add your first habit</string>
+    <string name="this_week">THIS WEEK</string>
+    <string name="best_streak">BEST STREAK</string>
+    <string name="active">ACTIVE</string>
+    <string name="less">Less</string>
+    <string name="more">More</string>
+    <string name="current_streak">Current</string>
+    <string name="best">Best: %1$d</string>
+    <string name="new_habit">New Habit</string>
+    <string name="edit_habit">Edit Habit</string>
+    <string name="choose_icon">CHOOSE ICON</string>
+    <string name="tap_to_change_icon">Tap to change icon</string>
+    <string name="habit_name">HABIT NAME</string>
+    <string name="schedule">SCHEDULE</string>
+    <string name="save_habit">Save Habit</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="discard_habit">Discard Habit</string>
+    <string name="delete_habit">Delete Habit</string>
+    <string name="delete_habit_title">Delete Habit?</string>
+    <string name="delete_habit_description">This will permanently delete this habit and all its records.</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="streaks">STREAKS</string>
+    <string name="activity">ACTIVITY</string>
 </resources>

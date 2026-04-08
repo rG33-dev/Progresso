@@ -45,42 +45,42 @@ val Typography = Typography(
     headlineLarge = TextStyle(
         fontFamily = ManropeFontFamily,
         fontWeight = FontWeight.ExtraBold,
-        fontSize = 26.sp,
+        fontSize = 34.sp,
     ),
     headlineMedium = TextStyle(
         fontFamily = ManropeFontFamily,
         fontWeight = FontWeight.ExtraBold,
-        fontSize = 22.sp,
+        fontSize = 28.sp,
     ),
     titleMedium = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 16.sp,
+        fontSize = 21.sp,
     ),
     bodyLarge = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 18.sp,
     ),
     bodyMedium = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
+        fontSize = 18.sp,
     ),
     bodySmall = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.Medium,
-        fontSize = 11.sp,
+        fontSize = 14.sp,
         letterSpacing = 0.07.em,
     ),
     labelLarge = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.Bold,
-        fontSize = 16.sp,
+        fontSize = 21.sp,
     ),
     labelSmall = TextStyle(
         fontFamily = InterFontFamily,
         fontWeight = FontWeight.Medium,
-        fontSize = 10.sp,
+        fontSize = 13.sp,
     ),
 )
