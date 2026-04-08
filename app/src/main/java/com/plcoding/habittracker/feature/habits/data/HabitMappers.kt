@@ -2,6 +2,7 @@ package com.plcoding.habittracker.feature.habits.data
 
 import com.plcoding.habittracker.feature.habits.domain.CompletionRecord
 import com.plcoding.habittracker.feature.habits.domain.Habit
+import com.plcoding.habittracker.feature.habits.domain.HabitIcon
 import com.plcoding.habittracker.feature.habits.domain.WeekDays
 import java.time.Instant
 import java.time.ZoneId
@@ -11,15 +12,15 @@ fun HabitEntity.toHabit(): Habit {
     return Habit(
         id = id,
         name = name,
-        icon = icon,
+        icon = HabitIcon.valueOf(icon),
         weekDays = WeekDays(
-            monday = monday == 1,
-            tuesday = tuesday == 1,
-            wednesday = wednesday == 1,
-            thursday = thursday == 1,
-            friday = friday == 1,
-            saturday = saturday == 1,
-            sunday = sunday == 1
+            monday = monday,
+            tuesday = tuesday,
+            wednesday = wednesday,
+            thursday = thursday,
+            friday = friday,
+            saturday = saturday,
+            sunday = sunday
         ),
         createdAt = Instant.ofEpochMilli(createdAt)
             .atZone(ZoneId.of("UTC"))
@@ -30,14 +31,14 @@ fun Habit.toHabitEntity(): HabitEntity {
     return HabitEntity(
         id = id,
         name = name,
-        icon = icon,
-        monday = if (weekDays.monday) 1 else 0,
-        tuesday = if (weekDays.tuesday) 1 else 0,
-        wednesday = if (weekDays.wednesday) 1 else 0,
-        thursday = if (weekDays.thursday) 1 else 0,
-        friday = if (weekDays.friday) 1 else 0,
-        saturday = if (weekDays.saturday) 1 else 0,
-        sunday = if (weekDays.sunday) 1 else 0,
+        icon = icon.name,
+        monday = weekDays.monday,
+        tuesday = weekDays.tuesday,
+        wednesday = weekDays.wednesday,
+        thursday = weekDays.thursday,
+        friday = weekDays.friday,
+        saturday = weekDays.saturday,
+        sunday = weekDays.sunday,
         createdAt = createdAt.toInstant().toEpochMilli()
     )
 }

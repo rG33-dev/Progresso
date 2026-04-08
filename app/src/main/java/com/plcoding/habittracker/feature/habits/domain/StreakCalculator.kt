@@ -1,5 +1,7 @@
 package com.plcoding.habittracker.feature.habits.domain
 
+import java.time.LocalDate
+import java.time.ZoneId
 import java.time.ZonedDateTime
 
 object StreakCalculator {
@@ -9,14 +11,14 @@ object StreakCalculator {
         completedDates: Set<ZonedDateTime>,
         today: ZonedDateTime
     ): Int {
-        val completedLocalDates = completedDates.map { it.toLocalDate() }.toSet()
+        val userZone = today.zone
+        val completedLocalDates = completedDates.toLocalDates(userZone)
         val todayLocal = today.toLocalDate()
-        val createdLocal = habit.createdAt.toLocalDate()
+        val createdLocal = habit.createdAt.withZoneSameInstant(userZone).toLocalDate()
 
         val isTodayScheduled = habit.weekDays.isScheduledFor(todayLocal.dayOfWeek)
         val isTodayCompleted = todayLocal in completedLocalDates
 
-        // Start from today if completed, otherwise start from yesterday
         var current = if (isTodayScheduled && !isTodayCompleted) {
             todayLocal.minusDays(1)
         } else {
@@ -44,9 +46,10 @@ object StreakCalculator {
         completedDates: Set<ZonedDateTime>,
         today: ZonedDateTime
     ): Int {
-        val completedLocalDates = completedDates.map { it.toLocalDate() }.toSet()
+        val userZone = today.zone
+        val completedLocalDates = completedDates.toLocalDates(userZone)
         val todayLocal = today.toLocalDate()
-        val createdLocal = habit.createdAt.toLocalDate()
+        val createdLocal = habit.createdAt.withZoneSameInstant(userZone).toLocalDate()
 
         var current = createdLocal
         var currentRun = 0
@@ -68,5 +71,9 @@ object StreakCalculator {
             current = current.plusDays(1)
         }
         return bestRun
+    }
+
+    private fun Set<ZonedDateTime>.toLocalDates(zone: ZoneId): Set<LocalDate> {
+        return map { it.withZoneSameInstant(zone).toLocalDate() }.toSet()
     }
 }

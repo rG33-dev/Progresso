@@ -10,13 +10,13 @@ data class HabitEntity(
     val id: Long = 0L,
     val name: String,
     val icon: String,
-    val monday: Int,
-    val tuesday: Int,
-    val wednesday: Int,
-    val thursday: Int,
-    val friday: Int,
-    val saturday: Int,
-    val sunday: Int,
+    val monday: Boolean,
+    val tuesday: Boolean,
+    val wednesday: Boolean,
+    val thursday: Boolean,
+    val friday: Boolean,
+    val saturday: Boolean,
+    val sunday: Boolean,
     @ColumnInfo(name = "created_at")
     val createdAt: Long
 )
