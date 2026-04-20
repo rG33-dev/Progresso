@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.room)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -40,6 +41,13 @@ android {
     buildFeatures {
         compose = true
     }
+
+   kotlin {
+       compilerOptions {
+           jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+       }
+   }
+
     @Suppress("UnstableApiUsage")
     testOptions {
         unitTests.all {
