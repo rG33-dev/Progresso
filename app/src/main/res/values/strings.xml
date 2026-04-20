@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HabitTracker</string>
+    <string name="app_name">Progresso</string>
     <string name="navigate_back">Navigate back</string>
     <string name="today">Today</string>
     <string name="daily_progress">Daily progress</string>
