@@ -1,5 +1,6 @@
 package com.plcoding.habittracker
 
+import PreviewScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
-import com.plcoding.habittracker.feature.habits.presentation.navigation.HabitsNavHost
 import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
 
 class MainActivity : ComponentActivity() {
@@ -20,10 +20,11 @@ class MainActivity : ComponentActivity() {
             HabitTrackerTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     val navController = rememberNavController()
-                    HabitsNavHost(
-                        navController = navController,
-                        modifier = Modifier.padding(innerPadding),
-                    )
+//                    HabitsNavHost(
+//                        navController = navController,
+//                        modifier = Modifier.padding(innerPadding),
+                    PreviewScreen(navController, {}, modifier = Modifier.padding(innerPadding))
+
                 }
             }
         }
