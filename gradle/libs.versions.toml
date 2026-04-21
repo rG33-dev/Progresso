@@ -15,6 +15,7 @@ navigation-compose = "2.9.7"
 kotlinx-serialization = "1.11.0"
 junit5 = "6.0.3"
 assertk = "0.28.1"
+transportationConsumer = "4.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +46,7 @@ junit5-engine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", ve
 junit5-params = { group = "org.junit.jupiter", name = "junit-jupiter-params", version.ref = "junit5" }
 junit5-launcher = { group = "org.junit.platform", name = "junit-platform-launcher" }
 assertk = { group = "com.willowtreeapps.assertk", name = "assertk", version.ref = "assertk" }
+transportation-consumer = { group = "com.google.android.libraries.mapsplatform.transportation", name = "transportation-consumer", version.ref = "transportationConsumer" }
 
 [bundles]
 koin = ["koin-android", "koin-androidx-compose"]

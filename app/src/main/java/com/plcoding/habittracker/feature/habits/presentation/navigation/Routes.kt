@@ -2,7 +2,10 @@ package com.plcoding.habittracker.feature.habits.presentation.navigation
 
 import kotlinx.serialization.Serializable
 
-sealed interface Route {
+sealed interface Route{
+
+   @Serializable data object Preview : Route
+
     @Serializable
     data object Today : Route
 
