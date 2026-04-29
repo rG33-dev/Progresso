@@ -1,5 +1,6 @@
 package com.plcoding.habittracker.feature.habits.presentation.today
 
+import HabitTrackerTheme
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -45,7 +46,7 @@ import com.plcoding.habittracker.core.presentation.designsystem.HabitIconContain
 import com.plcoding.habittracker.core.presentation.designsystem.HabitTrackerIconButton
 import com.plcoding.habittracker.core.presentation.designsystem.HabitTrackerTopBar
 import com.plcoding.habittracker.feature.habits.domain.HabitIcon
-import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
+
 import org.koin.androidx.compose.koinViewModel
 import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter

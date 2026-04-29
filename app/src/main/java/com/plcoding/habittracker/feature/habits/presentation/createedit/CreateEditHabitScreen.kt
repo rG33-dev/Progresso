@@ -1,5 +1,6 @@
 package com.plcoding.habittracker.feature.habits.presentation.createedit
 
+import HabitTrackerTheme
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -48,7 +49,7 @@ import com.plcoding.habittracker.core.presentation.designsystem.HabitTrackerDial
 import com.plcoding.habittracker.core.presentation.designsystem.HabitTrackerTopBar
 import com.plcoding.habittracker.feature.habits.domain.HabitIcon
 import com.plcoding.habittracker.feature.habits.domain.WeekDays
-import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
+
 import com.plcoding.habittracker.ui.theme.InterFontFamily
 import org.koin.androidx.compose.koinViewModel
 import java.time.DayOfWeek

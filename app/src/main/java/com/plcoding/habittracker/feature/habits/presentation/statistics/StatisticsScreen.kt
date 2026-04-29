@@ -1,5 +1,6 @@
 package com.plcoding.habittracker.feature.habits.presentation.statistics
 
+import HabitTrackerTheme
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
@@ -39,7 +40,6 @@ import com.plcoding.habittracker.R
 import com.plcoding.habittracker.core.presentation.designsystem.HabitIconContainer
 import com.plcoding.habittracker.core.presentation.designsystem.HabitTrackerTopBar
 import com.plcoding.habittracker.feature.habits.domain.HabitIcon
-import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
 import org.koin.androidx.compose.koinViewModel
 import java.time.DayOfWeek
 import java.time.LocalDate

@@ -27,3 +27,19 @@ val TextTertiary = Color(0xFF666680)
 
 // Border
 val Border = Color(0xFF333350)
+
+// Coffee Palette
+val Espresso = Color(0xFF1B1411)      // Deepest background
+val Mocha = Color(0xFF2C1E1A)         // Surface/Cards
+val Latte = Color(0xFFD4A373)         // Primary Accent (Warm tan)
+val Cappuccino = Color(0xFF8B5E3C)    // Secondary (Muted brown)
+val Cream = Color(0xFFF5EBE0)         // Main Text
+val Froth = Color(0xFFD5BDAF)         // Secondary Text
+
+// Status & Accents
+val SuccessCoffee = Color(0xFF606C38) // Earthy green
+val StreakOrange = Color(0xFFBC6C25)  // Toasted orange
+val DestructiveRed = Color(0xFF9E2A2B)
+val BorderCoffee = Color(0xFF3D2B24)
+
+
