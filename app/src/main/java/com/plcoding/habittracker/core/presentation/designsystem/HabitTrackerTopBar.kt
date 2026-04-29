@@ -16,7 +16,7 @@ import androidx.compose.ui.graphics.vector.rememberVectorPainter
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.plcoding.habittracker.R
-import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
+
 
 @Composable
 fun HabitTrackerTopBar(

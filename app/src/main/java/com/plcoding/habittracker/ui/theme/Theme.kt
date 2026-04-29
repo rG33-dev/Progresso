@@ -1,5 +1,3 @@
-package com.plcoding.habittracker.ui.theme
-
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
@@ -7,6 +5,18 @@ import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
+import com.plcoding.habittracker.ui.theme.BorderCoffee
+import com.plcoding.habittracker.ui.theme.Cappuccino
+import com.plcoding.habittracker.ui.theme.Cream
+import com.plcoding.habittracker.ui.theme.DestructiveRed
+import com.plcoding.habittracker.ui.theme.Espresso
+import com.plcoding.habittracker.ui.theme.Froth
+import com.plcoding.habittracker.ui.theme.Latte
+import com.plcoding.habittracker.ui.theme.Mocha
+import com.plcoding.habittracker.ui.theme.StreakOrange
+import com.plcoding.habittracker.ui.theme.SuccessCoffee
+import com.plcoding.habittracker.ui.theme.Typography
+
 
 @Immutable
 data class ExtendedColors(
@@ -22,51 +32,39 @@ data class ExtendedColors(
 )
 
 private val LocalExtendedColors = staticCompositionLocalOf {
-    ExtendedColors(
-        surfaceElevated = SurfaceElevated,
-        surfaceBright = SurfaceBright,
-        success = Success,
-        streak = Streak,
-        accentPink = AccentPink,
-        destructive = Destructive,
-        textSecondary = TextSecondary,
-        textTertiary = TextTertiary,
-        border = Border,
-    )
+    DarkExtendedColors
 }
-
 private val DarkColorScheme = darkColorScheme(
-    primary = Primary,
-    onPrimary = TextPrimary,
-    primaryContainer = PrimaryLight,
-    secondary = Secondary,
-    onSecondary = TextPrimary,
-    tertiary = AccentPink,
-    background = Background,
-    onBackground = TextPrimary,
-    surface = Surface,
-    onSurface = TextPrimary,
-    onSurfaceVariant = TextSecondary,
-    surfaceContainerLow = Surface,
-    surfaceContainer = Surface,
-    surfaceContainerHigh = SurfaceElevated,
-    inversePrimary = PrimaryDark,
-    error = Destructive,
-    onError = TextPrimary,
-    outline = Border,
-    outlineVariant = Border,
+    primary = Latte,
+    onPrimary = Espresso,
+    primaryContainer = Cappuccino,
+    secondary = Cappuccino,
+    onSecondary = Cream,
+    tertiary = StreakOrange,
+    background = Espresso,      // Dark background
+    onBackground = Cream,       // Main text
+    surface = Mocha,            // Card backgrounds
+    onSurface = Cream,
+    onSurfaceVariant = Froth,
+    surfaceContainerLow = Espresso,
+    surfaceContainer = Mocha,
+    surfaceContainerHigh = Mocha,
+    inversePrimary = Latte,
+    error = DestructiveRed,
+    onError = Cream,
+    outline = BorderCoffee,
+    outlineVariant = BorderCoffee,
 )
-
 private val DarkExtendedColors = ExtendedColors(
-    surfaceElevated = SurfaceElevated,
-    surfaceBright = SurfaceBright,
-    success = Success,
-    streak = Streak,
-    accentPink = AccentPink,
-    destructive = Destructive,
-    textSecondary = TextSecondary,
-    textTertiary = TextTertiary,
-    border = Border,
+    surfaceElevated = Mocha,
+    surfaceBright = Color(0xFF3D2B24),
+    success = SuccessCoffee,
+    streak = StreakOrange,
+    accentPink = Color(0xFFE29578), // Peach/Coffee accent
+    destructive = DestructiveRed,
+    textSecondary = Froth,
+    textTertiary = Froth.copy(alpha = 0.6f),
+    border = BorderCoffee,
 )
 
 @Composable

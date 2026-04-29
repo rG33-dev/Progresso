@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.plcoding.habittracker.feature.habits.domain.HabitIcon
-import com.plcoding.habittracker.ui.theme.HabitTrackerTheme
 
 @Composable
 fun HabitIconContainer(
